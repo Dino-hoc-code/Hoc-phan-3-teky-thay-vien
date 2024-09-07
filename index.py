@@ -8,22 +8,26 @@ class MyProject:
         # Thiết lập kích thước của cửa sổ
         self.root.geometry('170x150')
 
+        # Định nghĩa vị trí
+        self.x = 15
+        self.y = 10
+
         #label - lbl
         #entry - ety
         #Button - btn
         self.lblUsername = tk.Label(self.root, text="Username")
         # Đặt vị trí cho lblUsername
-        self.lblUsername.place(x=10, y=10)
+        self.lblUsername.place(x=self.x, y=self.y)
         self.etyUsername = tk.Entry(self.root)
-        self.etyUsername.place(x=10, y=30)
+        self.etyUsername.place(x=self.x, y=self.y + 20)
         
         self.lblPassword = tk.Label(self.root, text='Password')
-        self.lblPassword.place(x=10, y=50)
+        self.lblPassword.place(x=self.x, y=self.y + 40)
         self.etyPassword = tk.Entry(self.root)
-        self.etyPassword.place(x=10, y=70)
+        self.etyPassword.place(x=self.x, y=self.y + 60)
 
         self.btnLogin = tk.Button(self.root, text = 'Login')
-        self.btnLogin.place(x=10, y=110)
+        self.btnLogin.place(x=self.x, y=self.y+ 100)
 
 
 
