@@ -45,11 +45,11 @@ class MyProject:
 
         if Password != CheckPassword:
             messagebox.showerror('Error', 'Password and CheckPasword must be the same')
-        elif Username =='':
+        elif Username =='' or len(Username) < 6:
             messagebox.showerror('Error', 'You have not typed your username')
         elif Email == '':
             messagebox.showerror('Error', 'You have not typed your email')
-        elif Password =='':
+        elif Password =='' and len(Username) < 6:
             messagebox.showerror('Error', 'You have to type your password')
         else:
             messagebox.showinfo('Info', 'You successfully registered, say Quang is the best')
