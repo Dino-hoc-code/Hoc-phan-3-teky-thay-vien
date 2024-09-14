@@ -32,7 +32,7 @@ class MyProject:
         self.etyCheckPassword = tk.Entry(self.root, width= self.Width)
         self.etyCheckPassword.place(x=self.x, y=self.y +140)
 
-        self.btnRegister = tk.Button(self.root, text= 'Register' )
+        self.btnRegister = tk.Button(self.root, text= 'Register   ' )
         self.btnRegister.place(x=self.x + 200, y=self.y + 180)
 
 # Chạy ứng dụng
@@ -42,4 +42,4 @@ if __name__=='__main__':
     # Khởi tạo đối tượng MyProject với cửa sổ chính
     app = MyProject(root)
     # Cho người dùng điều khiển cửa sổ
-    root.mainloop()
+    root.mainloop()   
