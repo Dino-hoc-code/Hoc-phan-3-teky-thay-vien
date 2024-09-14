@@ -32,8 +32,11 @@ class MyProject:
         self.etyCheckPassword = tk.Entry(self.root, width= self.Width)
         self.etyCheckPassword.place(x=self.x, y=self.y +140)
 
-        self.btnRegister = tk.Button(self.root, text= 'Register   ' )
+        self.btnRegister = tk.Button(self.root, text= 'Register', command= self.ChucNang)
         self.btnRegister.place(x=self.x + 200, y=self.y + 180)
+
+    def ChucNang(self):
+        print('hello')
 
 # Chạy ứng dụng
 if __name__=='__main__':
