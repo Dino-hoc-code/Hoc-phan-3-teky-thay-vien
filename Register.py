@@ -1,4 +1,6 @@
 import tkinter as tk
+from tkinter import messagebox
+
 class MyProject:
     def __init__(self, root):
         # Thiết lập cửa sổ màn hình
@@ -10,7 +12,7 @@ class MyProject:
 
         self.x = 10
         self.y = 10
-        self.Width = 50
+        self.Width = 60
 
         self.lblUsername = tk.Label(self.root, text='Your Username')
         self.lblUsername.place(x=self.x, y=self.y)
@@ -40,9 +42,17 @@ class MyProject:
         Email = self.etyEmail.get() 
         Password = self.etyPassword.get() 
         CheckPassword = self.etyCheckPassword.get()
+
         if Password != CheckPassword:
-            print('Không hợp lệ')
-        
+            messagebox.showerror('Error', 'Password and CheckPasword must be the same')
+        elif Username =='':
+            messagebox.showerror('Error', 'You have not typed your username')
+        elif Email == '':
+            messagebox.showerror('Error', 'You have not typed your email')
+        elif Password =='':
+            messagebox.showerror('Error', 'You have to type your password')
+        else:
+            messagebox.showinfo('Info', 'You successfully registered, say Quang is the best')
 
 # Chạy ứng dụng
 if __name__=='__main__':
