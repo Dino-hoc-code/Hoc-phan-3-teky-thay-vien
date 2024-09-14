@@ -36,7 +36,13 @@ class MyProject:
         self.btnRegister.place(x=self.x + 200, y=self.y + 180)
 
     def ChucNang(self):
-        print('hello')
+        Username = self.etyUsername.get() 
+        Email = self.etyEmail.get() 
+        Password = self.etyPassword.get() 
+        CheckPassword = self.etyCheckPassword.get()
+        if Password != CheckPassword:
+            print('Không hợp lệ')
+        
 
 # Chạy ứng dụng
 if __name__=='__main__':
