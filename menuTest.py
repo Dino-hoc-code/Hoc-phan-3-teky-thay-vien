@@ -20,29 +20,29 @@ class MyProject:
         self.fileMenu = Menu(self.menu, tearoff=0)
         self.menu.add_cascade(label='File', command=self.fileMenu)
         self.fileMenu.add_command(label='Text' , command=self.newTextFile)
-        # # self.newTextFile.add_command(label='pdf file', command=self.PDFFileMenu)
-        # self.fileMenu.add_command(label='new file', command=self.newFile)
-        # self.fileMenu.add_command(label='new window', command=self.newWindow)
-        # self.fileMenu.add_command(label='new windowwp', command=self.newWindowWP)
-        # self.fileMenu.add_command(label='open file', command=self.openFile)
-        # self.fileMenu.add_command(label='open folder', command=self.openFolder)
-        # self.fileMenu.add_command(label='open workspaceff', command=self.openWorkspaceFF)
-        # self.fileMenu.add_command(label='open recent', command=self.openRecent)
+        # self.newTextFile.add_command(label='pdf file', command=self.PDFFileMenu)
+        self.fileMenu.add_command(label='new file', command=self.newFile)
+        self.fileMenu.add_command(label='new window', command=self.newWindow)
+        self.fileMenu.add_command(label='new windowwp', command=self.newWindowWP)
+        self.fileMenu.add_command(label='open file', command=self.openFile)
+        self.fileMenu.add_command(label='open folder', command=self.openFolder)
+        self.fileMenu.add_command(label='open workspaceff', command=self.openWorkspaceFF)
+        self.fileMenu.add_command(label='open recent', command=self.openRecent)
 
-        # self.editMenu = Menu(self.menu, tearoff=0)
-        # self.menu.add_command(label='Edit', command=self.editMenu)
+        self.editMenu = Menu(self.menu, tearoff=0)
+        self.menu.add_command(label='Edit', command=self.editMenu)
 
-        # self.openMenu = Menu(self.menu, tearoff=0)
-        # self.menu.add_command(label='Open', command=self.openMenu)
+        self.openMenu = Menu(self.menu, tearoff=0)
+        self.menu.add_command(label='Open', command=self.openMenu)
 
-        # self.closeMenu = Menu(self.menu, tearoff=0)
-        # self.menu.add_command(label='Close', command=self.closeMenu)
+        self.closeMenu = Menu(self.menu, tearoff=0)
+        self.menu.add_command(label='Close', command=self.closeMenu)
 
-        # self.storeMenu = Menu(self.menu, tearoff=0)
-        # self.menu.add_command(label='Delete', command=self.storeMenu)
+        self.storeMenu = Menu(self.menu, tearoff=0)
+        self.menu.add_command(label='Delete', command=self.storeMenu)
 
-        # self.deleteMenu = Menu(self.menu, tearoff=0)
-        # self.menu.add_command(label='Store', command=self.deleteMenu)
+        self.deleteMenu = Menu(self.menu, tearoff=0)
+        self.menu.add_command(label='Store', command=self.deleteMenu)
 
     def newTextFile(self):
         pass
