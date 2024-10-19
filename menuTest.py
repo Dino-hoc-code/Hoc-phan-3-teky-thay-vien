@@ -12,14 +12,8 @@ class MyProject:
         # Thiết lập kích thước của cửa sổ
         self.root.geometry('400x300')
         
-        # Tạo Menu bar
-        self.menu = Menu(root)
-        self.root.config(menu=self.menu)
         
-        # Tạo File Menu
-        self.fileMenu = Menu(self.menu, tearoff=0)
-        self.menu.add_cascade(label='File', command=self.fileMenu)
-        self.fileMenu.add_command(label='Text' , command=self.newTextFile)
+        
         # # self.newTextFile.add_command(label='pdf file', command=self.PDFFileMenu)
         # self.fileMenu.add_command(label='new file', command=self.newFile)
         # self.fileMenu.add_command(label='new window', command=self.newWindow)
