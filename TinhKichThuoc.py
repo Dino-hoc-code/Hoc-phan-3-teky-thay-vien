@@ -24,10 +24,17 @@ class MyProject:
         self.etyChieuRongHCN = tk.Entry(self.root, width= self.width)
         self.etyChieuRongHCN.place (x = self.x, y = self.y + 60)
 
-        self.btnTinhChuVi = tk.Button (self.root, text='Chu Vi', command= self.ChucNang1)
-        self.btnTinhChuVi.place (x=self.x + 200, y=self.y + 100)
-        self.btnTinhDienTich = tk.Button (self.root, text='Dien Tich', command= self.ChucNang2)
-        self.btnTinhDienTich.place (x=self.x + 250, y=self.y + 100)
+
+        self.lblBankinh = tk.Label(self.root, text = 'Chiều dài HCN')
+        self.lblBankinh.place (x=self.x, y = self.y + 80)
+        self.etyBankinh = tk.Entry(self.root, width= self.width)
+        self.etyBankinh.place (x = self.x, y = self.y + 100)
+
+
+        self.btnTinhChuViHCN = tk.Button (self.root, text='Chu Vi', command= self.ChucNang1)
+        self.btnTinhChuViHCN.place (x=self.x + 200, y=self.y + 180)
+        self.btnTinhDienTichHCN = tk.Button (self.root, text='Dien Tich', command= self.ChucNang2)
+        self.btnTinhDienTich.place (x=self.x + 250, y=self.y + 180)
 
     def ChucNang1(self):
         ChieuDaiHCN = float(self.etyChieuDaiHCN.get())
