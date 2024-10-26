@@ -12,12 +12,12 @@ class MyProject:
 
         self.x = 10
         self.y = 10
-        self.width = 30
+        self.width = 63
 
         self.lblChieuDaiHCN = tk.Label(self.root, text = 'Chiều dài HCN')
         self.lblChieuDaiHCN.place (x = self.x, y= self.y)
         self.etyChieuDaiHCN = tk.Entry(self.root, width= self.width)
-        self.etyChieuDaiHCN.place (x = self.x, y = self.y + 20)
+        self.etyChieuDaiHCN.place (x = self.x, y = self.y +20)
 
         self.lblChieuRongHCN = tk.Label(self.root, text = 'Chiều rộng HCN')
         self.lblChieuRongHCN.place (x=self.x, y = self.y + 40)
@@ -25,16 +25,11 @@ class MyProject:
         self.etyChieuRongHCN.place (x = self.x, y = self.y + 60)
 
 
-        self.lblBankinh = tk.Label(self.root, text = 'Chiều dài HCN')
-        self.lblBankinh.place (x=self.x, y = self.y + 80)
-        self.etyBankinh = tk.Entry(self.root, width= self.width)
-        self.etyBankinh.place (x = self.x, y = self.y + 100)
-
 
         self.btnTinhChuViHCN = tk.Button (self.root, text='Chu Vi', command= self.ChucNang1)
-        self.btnTinhChuViHCN.place (x=self.x + 200, y=self.y + 180)
+        self.btnTinhChuViHCN.place (x=self.x + 200, y=self.y + 100)
         self.btnTinhDienTichHCN = tk.Button (self.root, text='Dien Tich', command= self.ChucNang2)
-        self.btnTinhDienTich.place (x=self.x + 250, y=self.y + 180)
+        self.btnTinhDienTichHCN.place (x=self.x + 250, y=self.y + 100)
 
     def ChucNang1(self):
         ChieuDaiHCN = float(self.etyChieuDaiHCN.get())

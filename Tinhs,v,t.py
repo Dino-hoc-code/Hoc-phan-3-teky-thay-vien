@@ -37,43 +37,44 @@ class MyProject:
     def Caculate(self):
 
         if not  self.etydisplacement.get():
-            if self.etytime.get() or self.etyspeed.get():
-                v=float(self.etyspeed.get())
-                t=float(self.etytime.get())
-                if  v<0 or t<0:
-                    messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
-                else:
-                    ketquaS=t*v
-                    KetQuaCuoiCung = 'S='+ str(ketquaS)
-                    messagebox.showinfo('Info',KetQuaCuoiCung )
+            v=float(self.etyspeed.get())
+            t=float(self.etytime.get())
+            if  v<0 or t<0:
+                messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
             else:
-                messagebox.showerror('ERROR',"V,T must fill " )
+                ketquaS=t*v
+                KetQuaCuoiCung = 'S='+ str(ketquaS)
+                messagebox.showinfo('Info',KetQuaCuoiCung )
+            
 
         if not  self.etyspeed.get():
-            if not self.etytime.get() or not self.etydisplacement.get():
-                s=float(self.etydisplacement.get())
-                t=float(self.etytime.get())
-                if  s<0 or t<0:
-                    messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
-                else:
-                    ketquaV=s/t
-                    KetQuaCuoiCung = 'V='+ str(ketquaV)
-                    messagebox.showinfo('Info',KetQuaCuoiCung )
+            s=float(self.etydisplacement.get())
+            t=float(self.etytime.get())
+            if  s<0 or t<0:
+                messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
             else:
-                messagebox.showerror('ERROR',"S,T must fill " )
+                ketquaV=s/t
+                KetQuaCuoiCung = 'V='+ str(ketquaV)
+                messagebox.showinfo('Info',KetQuaCuoiCung )
+            
 
-        if not  self.etytime.get():          
-            if not self.etyspeed.get() or not self.etydisplacement.get():
-                s=float(self.etydisplacement.get())
-                v=float(self.etyspeed.get())
-                if  v<0 or s<0:
-                    messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
-                else:
-                    ketquaT=s/v
-                    KetQuaCuoiCung = 'T='+ str(ketquaT)
-                    messagebox.showinfo('Info',KetQuaCuoiCung )
+        if not  self.etytime.get():              
+            s=float(self.etydisplacement.get())
+            v=float(self.etyspeed.get())
+            if  v<0 or s<0:
+                messagebox.showerror('ERROR',"S,V,T must be greater than 0" )
             else:
+                ketquaT=s/v
+                KetQuaCuoiCung = 'T='+ str(ketquaT)
+                messagebox.showinfo('Info',KetQuaCuoiCung )
+
+
+        if not self.etyspeed.get() and not self.etydisplacement.get():
                 messagebox.showerror('ERROR',"S,V must fill " )
+        if not self.etyspeed.get() and not self.etytime.get():
+                messagebox.showerror('ERROR',"V,T must fill " )
+        if not self.etytime.get() and not self.etydisplacement.get():
+                messagebox.showerror('ERROR',"S,T must fill " )
 
         
 # Chạy ứng dụng
